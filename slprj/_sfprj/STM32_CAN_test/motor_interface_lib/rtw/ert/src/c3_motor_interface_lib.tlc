@@ -1,0 +1,60 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   6 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_c3_motor_interface_lib"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_AMK_startup"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "AMK_startup"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_AMK_errorReset"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "AMK_errorReset"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_AMK_shutdown"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "AMK_shutdown"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c3_motor_interface_lib"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
